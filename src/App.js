@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Course from "./Course";
 
 function App() {
+  const notes = [
+    {
+      id: 1,
+      name: "Iphone_11",
+      price: 600,
+      important: true,
+    },
+    {
+      id: 2,
+      name: "Samsung z fold",
+      price: 1200,
+      important: true,
+    },
+    {
+      id: 3,
+      name: "Jabra Elye headphone",
+      price: 200,
+      important: false,
+    },
+    {
+      id: 4,
+      name: "MacBook",
+      price: 1600,
+      important: true,
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1> Products with Price</h1>
+      <Course notes={notes} />
     </div>
   );
 }
